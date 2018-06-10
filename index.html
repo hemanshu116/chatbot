@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Raleway");
+/*#ffc6b0;*/
+/*#ade0ff*/
+body {
+  background: #eff2fa;
+  font-family: 'Raleway', sans-serif; }
+  body * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+#freud {
+  padding: 0px;
+  font-family: 'Raleway', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
+  #freud.chat {
+    background: #fff;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 400px;
+    border: 1px solid #d6d6d6;
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    #freud.chat .freud-icon {
+      display: none; }
+    #freud.chat .freud-quote .freud-sentence {
+      margin: 0 10px;
+      max-width: 100%; }
+      #freud.chat .freud-quote .freud-sentence .__r .freud-btn {
+        margin-bottom: 10px;
+        padding: .5em .8em;
+        width: 100%;
+        text-align: center; }
+  #freud * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  #freud .freud-icon {
+    -webkit-transition: all 0.4s cubic-bezier(0.3, -0.5, 0.3, 1.3);
+    transition: all 0.4s cubic-bezier(0.3, -0.5, 0.3, 1.3);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45);
+            box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45);
+    overflow: hidden; }
+    #freud .freud-icon img {
+      width: 100%; }
+    #freud .freud-icon.__bot {
+      background: #fff;
+      top: 0;
+      left: 0; }
+    #freud .freud-icon.__user {
+      opacity: 0;
+      top: 0;
+      right: 0; }
+  #freud .freud-quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 20px 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    position: relative; }
+    #freud .freud-quote.__bot {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      #freud .freud-quote.__bot .freud-sentence {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+        #freud .freud-quote.__bot .freud-sentence .__elem {
+          background: white;
+          color: black;
+          text-align: left; }
+        #freud .freud-quote.__bot .freud-sentence .__r {
+          text-align: left;
+          width: 100%; }
+    #freud .freud-quote .freud-sentence {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      max-width: 70%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin: 0 80px; }
+      #freud .freud-quote .freud-sentence .__r {
+        -webkit-transition: all 0.25s cubic-bezier(0.3, -0.5, 0.3, 2);
+        transition: all 0.25s cubic-bezier(0.3, -0.5, 0.3, 2);
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        max-width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 0;
+        text-align: right; }
+        #freud .freud-quote .freud-sentence .__r * {
+          max-width: 100%; }
+        #freud .freud-quote .freud-sentence .__r .freud-btn {
+          display: inline-block;
+          text-decoration: none;
+          padding: .6em 1.2em;
+          font-size: 1em;
+          font-weight: 700;
+          border-radius: 3px;
+          background-color: #60428c;
+          color: #fff;
+          border: 0;
+          margin-right: 10px;
+          -webkit-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+          -webkit-box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45);
+                  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45); }
+          #freud .freud-quote .freud-sentence .__r .freud-btn:hover {
+            cursor: pointer;
+            background-color: rgba(146, 3, 19, 0.95); }
+          @media screen and (max-width: 400px) {
+            #freud .freud-quote .freud-sentence .__r .freud-btn {
+              margin-bottom: 10px; } }
+        #freud .freud-quote .freud-sentence .__r .freud-input {
+          padding: 1em;
+          border: 1px solid #d6d6d6;
+          border-color: #cc1b9d;
+          position: relative;
+          display: block;
+          width: 100%;
+          border-radius: 3px;
+          -webkit-transition: all .25s ease-in-out;
+          transition: all .25s ease-in-out;
+          -webkit-box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45);
+                  box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45); }
+      #freud .freud-quote .freud-sentence .__elem {
+        -webkit-box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45);
+                box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.45);
+        border: 1px solid #d6d6d6;
+        -webkit-transition: all 0.25s cubic-bezier(0.3, -0.5, 0.3, 2);
+        transition: all 0.25s cubic-bezier(0.3, -0.5, 0.3, 2);
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        max-width: 100%;
+        background: #cc1b9d;
+        color: white;
+        margin-bottom: 10px;
+        padding: 1em;
+        border-radius: 15px;
+        text-align: right; }
+        #freud .freud-quote .freud-sentence .__elem * {
+          max-width: 100%;
+          border-radius: 15px; }
+  @media screen and (max-width: 400px) {
+    #freud .freud-icon {
+      width: 30px;
+      height: 30px; }
+    #freud .freud-quote .freud-sentence {
+      margin: 0 40px;
+      max-width: 100%; } }
+
+</style>
+<script src="https://www.riccardotartaglia.it/freudjs/js/freud.min.js"></script>
+<body>
+    <div style="text-align: center; margin:40px auto;">
+        <img style="max-width: 100%;" src="https://www.riccardotartaglia.it/freudjs/img/header.png">
+    </div>
+    <div id="freud">
+        <div id="bot-icon" class="freud-icon __bot">
+            <img src="https://www.riccardotartaglia.it/freudjs/img/bot.png">
+        </div>
+        <div id="user-icon" class="freud-icon __user">
+            <img src="https://www.riccardotartaglia.it/freudjs/img/user.png">
+        </div>
+    </div>
+</body>
+<script>
+    var nodes = {
+        "start": {
+            wait: 200,
+            sentence: [
+                {
+                    mex: '<strong>Oh! Hi!</strong> 👋👋',
+                    wait: 500
+                },
+                {
+                    mex: '<img src="https://www.riccardotartaglia.it/freudjs/img/hi.gif">',
+                    wait: 1000
+                },
+            ],
+            r: {
+                wait: 1800,
+                type: "button",
+                el: [
+                    {type: "nav", value: "q2", label: "What!? a chatbot?"},
+                    {type: "nav", value: "q3", label: "Who are you?"},
+                    //{type: "action", value: function(){$freud.do('about')}, label:"Who are you?"},
+                    //{type: "link", value: "http://www.google.it", label:"Show me Google"}
+                ]
+            }
+        },
+        "q2": {
+            wait: 600,
+            sentence: [
+                {
+                    mex: '<strong>Yes! I\'m FreudJS a Javascript library for make chatbot 💪</strong><br>I can transform websites into <strong>Conversational Experiences</strong>',
+                    wait: 200
+                },
+                {
+                    mex: '<img src="https://www.riccardotartaglia.it/freudjs/img/great.gif">',
+                    wait: 700
+                },
+                {
+                    mex: 'I can make your business <h1>BIGGER!</h1>',
+                    wait: 1000
+                }
+            ],
+            r: {
+                wait: 1900,
+                type: "button",
+                el: [
+                    {type: "nav", value: "q4", label: "Wow! Tell me more!"},
+                ]
+            }
+        },
+        "q3": {
+            wait: 800,
+            sentence: [
+                {
+                    mex: '<strong>I\'m FreudJS a Javascript library for make chatbot 💪</strong><br>I can transform websites into <strong>Conversational Experiences</strong>',
+                    wait: 200
+                },
+                {
+                    mex: '<img src="https://www.riccardotartaglia.it/freudjs/img/great.gif" width="270">',
+                    wait: 700
+                },
+                {
+                    mex: 'I can make your business <h1>BIGGER!</h1>',
+                    wait: 1000
+                }
+            ],
+            r: {
+                wait: 1900,
+                type: "button",
+                el: [
+                    {type: "nav", value: "q4", label: "Wow! Tell me more!"},
+                ]
+            }
+        },
+        "q4": {
+            wait: 500,
+            sentence: [
+                {
+                    mex: 'OK ❤️',
+                    wait: 0
+                }, {
+                    mex:
+                    'I can:<br><br>' +
+                    '1.Defining your goal: get leads, give support... 📈 <br>' +
+                    '2.Building the chatbot and customizing the design 🤖<br>' +
+                    '3.Run it on your web 💻<br>' +
+                    '4.Receiving leads on any app ⚡<br><br>' +
+                    'I can manage also your data!️',
+                    wait: 800
+                }, {
+                    mex:
+                        'Please tell me your name!',
+                    wait: 1600
+                }
+            ],
+            r: {
+                wait: 2000,
+                type: "input",
+                el: [
+                    {
+                        label: "Your Name...",
+                        fn: function (value) {
+                            if(value === '' || value === undefined){
+                                $freud.do('error');
+                            } else {
+                                $freud.setVar('name', value);
+                                $freud.do('q5');
+                            }
+                        }
+                    },
+                ]
+            }
+        },
+        "error": {
+            wait: 500,
+            sentence: [
+                {
+                    mex:
+                        'You have no name? Don\'t be shy!',
+                    wait: 0
+                }
+            ],
+            r: {
+                wait: 700,
+                type: "input",
+                el: [
+                    {
+                        label: "Tell me your name...",
+                        fn: function (value) {
+                            if(value === '' || value === undefined){
+                                $freud.do('error');
+                            } else {
+                                $freud.setVar('name', value);
+                                $freud.do('q5');
+                            }
+                        }
+                    },
+                ]
+            }
+        },
+        "q5": {
+            wait: 800,
+            type: "text",
+            sentence: [
+                {
+                    mex: 'Great <strong>{{name}}</strong>, as you see, I can memorize everything!'
+                },
+                {
+                    mex:
+                        'If you want make a Bot or make a simple chat you can contact my creator:<br><strong><a href="https://twitter.com/RikTarWeb" target="_blank">@riktarweb</a></strong>',
+                    wait: 400
+                },
+                {
+                    mex:
+                        '<img src="https://www.riccardotartaglia.it/freudjs/img/me.jpg">',
+                    wait: 600
+                }
+            ],
+            r: {
+                wait: 800,
+                type: "button",
+                el: [
+                    {type: "link", value: "https://riccardotartaglia.it/", label:"Visit Website"},
+                    {type: "link", value: "https://www.linkedin.com/in/riccardo-tartaglia/", label:"LinkedIn"},
+                    {type: "nav", value: "start", label: "Restart Conversation"},
+                ]
+            }
+        }
+    }
+
+    $freud.init('#freud', nodes);
+</script>
+</html>
